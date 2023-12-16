@@ -113,7 +113,17 @@ void cluster_helloworld(void *arg)
             
 
     }
+    // Print performance results
 
+    printf("Total cycles: %u\n", cycles);
+
+    printf("Active cycles: %u\n", active_cycles);
+
+    printf("Instructions executed: %u\n", instructions);
+
+    printf("Load data hazards: %u\n", ld_stall);
+
+    printf("Jump register data hazards: %u\n", jr_stall);
     
 
 
@@ -248,16 +258,6 @@ int main(void)
 
     return pmsis_kickoff((void *) helloworld);
 
-        // Print performance results
-
-    printf("Total cycles: %u\n", cycles);
-
-    printf("Active cycles: %u\n", active_cycles);
-
-    printf("Instructions executed: %u\n", instructions);
-
-    printf("Load data hazards: %u\n", ld_stall);
-
-    printf("Jump register data hazards: %u\n", jr_stall);
+    
 
 }
